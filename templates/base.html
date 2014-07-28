@@ -12,60 +12,109 @@ if data == None:
 %>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset='utf-8'>
-        <title>RoomBooking </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+        <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+            <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+                <head>
+                    <meta charset='utf-8'>
+                    <title>RoomBooking </title>
+                    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                    <meta name="description" content="">
+                    <meta name="author" content="">
 
-        <link rel="stylesheet" href="/static/css/bootstrap.css">
-        <link rel='stylesheet' href='/static/fullcalendar/fullcalendar.css' />
-        <link rel='stylesheet' href='/static/fullcalendar/lib/cupertino/jquery-ui.min.css' />
-        <link href='/static/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+                    <link rel="stylesheet" href="/static/css/bootstrap.css">
+                    <link rel='stylesheet' href='/static/fullcalendar/fullcalendar.css' />
+                    <link rel='stylesheet' href='/static/fullcalendar/lib/cupertino/jquery-ui.min.css' />
+                    <link href='/static/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
 
-        <link rel="icon" type="image/png" href="/static/favicon.ico">
+                    <link rel="icon" type="image/png" href="/static/favicon.ico">
 
-        <style type="text/css">
-            body {
-                padding-top:60px;
-                padding-bottom:40px;
-            }
+                    <style type="text/css">
+                        body {
+                            padding-top:60px;
+                            padding-bottom:40px;
+                        }
 
-            .sidebar-nav {
-                padding: 9px 0;
-            }
-        </style>
+                        .sidebar-nav {
+                            padding: 9px 0;
+                        }
+                    </style>
 
 
-        <link href="/static/css/main.css" rel="stylesheet">
+                    <link href="/static/css/main.css" rel="stylesheet">
 
-        <!--[if lt IE9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+                    <!--[if lt IE9]>
+                    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                    <![endif]-->
 
-        <!-- jQuery -->
-        <script src='/static/fullcalendar/lib/jquery.min.js'></script>
-        <script src='/static/fullcalendar/lib/jquery-ui.custom.min.js'></script>
-        <script src='/static/fullcalendar/lib/moment.min.js'></script>
-        <script src='/static/fullcalendar/fullcalendar.js'></script>
+                    <!-- jQuery -->
+                    <script src='/static/fullcalendar/lib/jquery.min.js'></script>
+                    <script src='/static/fullcalendar/lib/jquery-ui.custom.min.js'></script>
+                    <script src='/static/fullcalendar/lib/moment.min.js'></script>
+                    <script src='/static/fullcalendar/fullcalendar.js'></script>
 
-	 	${self.header()}
-    </head>
+                    ${self.header()}
+                </head>
 
-    <body>
-   <!--[if lt IE 7]>
-   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-   <![endif]-->
+                <body>
+                    <div class="navbar navbar-inverse">
 
-        ${self.body()}
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">Title</a>
+                  <div class="nav-collapse collapse navbar-inverse-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input class="search-query span2" placeholder="Search" type="text">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              
+                    </div>
 
-    </div>
-    <footer>
-    <p class="offset1">&copy; Zamplus.YuetingQian</p>
-    </footer>
-</body>
-</html>
+                        <!--[if lt IE 7]>
+                        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+                        <![endif]-->
+
+                        ${self.body()}
+
+                    </div>
+                <footer>
+                <p class="offset1">&copy; Zamplus.YuetingQian</p>
+                </footer>
+            </body>
+        </html>
