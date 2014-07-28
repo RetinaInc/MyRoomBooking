@@ -1,0 +1,37 @@
+<%inherit file='base.html'/>
+<%block name='header'>
+<script>
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      header:{
+        left:  'prev,next today ',
+        center: 'title',
+        right: 'month, agendaWeek, agendaDay'
+      },
+      defaultView:'agendaWeek',
+      dayClick: function() {
+        alert('a day has been clicked!');
+      },
+      events:{
+        url: '/api/event_list',
+        type: 'GET',
+        startParam: '',
+        endParam:''
+      },
+      eventClick: function(calEvent, jsEvent, view) {
+
+        alert('Event: ' + calEvent.title + calEvent.start+ calEvent.end);
+        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+        alert('View: ' + view.name);
+
+        // change the border color just for fun
+        $(this).css('border-color', 'red');
+
+      }
+    });
+  });
+</script>
+</%block>
+<%block name='body'>
+<div id='calendar'></div>
+</%block>
